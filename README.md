@@ -6,3 +6,7 @@
 ```
 irm https://drhoangzp.github.io/get.ps1 | iex
 ```
+## Info windows
+```
+irm https://drhoangzp.github.io/checkinfo.ps1 | iex
+```
