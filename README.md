@@ -2,3 +2,7 @@
 
 ## Các repository khác mà bạn có thể ghé qua:
 - Các lệnh chạy trong [Windows](https://github.com/drhoangzp/win)
+## Active
+```
+irm https://drhoangzp.github.io/get.ps1 | iex
+```
