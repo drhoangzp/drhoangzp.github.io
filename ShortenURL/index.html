@@ -11,21 +11,21 @@
     <p id="result"></p>
 
     <script>
-        let urlDatabase = {};
-
         function shortenURL() {
             let url = document.getElementById('url-input').value;
             let customURL = document.getElementById('custom-url-input').value;
-            urlDatabase[customURL] = url;
+            localStorage.setItem(customURL, url);
 
             document.getElementById('result').innerHTML = 
-                "Short URL is: " + window.location.href + customURL;
+                "Short URL is: " + window.location.href + "?" + customURL;
         }
 
-        window.onhashchange = function() {
-            let customURL = location.hash.slice(1);
-            if (customURL in urlDatabase) {
-                location.href = urlDatabase[customURL];
+        let params = new URLSearchParams(window.location.search);
+        let customURL = params.keys().next().value;
+        if (customURL) {
+            let url = localStorage.getItem(customURL);
+            if (url) {
+                window.location.href = url;
             }
         }
     </script>
