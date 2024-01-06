@@ -1,4 +1,33 @@
-<input type="url" id="txtUrl">
-<button onclick="shortenUrl()">Get my shortened URL</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <input type="text" id="url-input" placeholder="Enter URL here">
+    <input type="text" id="custom-url-input" placeholder="Enter custom short URL here">
+    <button onclick="shortenURL()">Shorten URL</button>
+    <p id="result"></p>
 
-<script src="./main.js"></script>
+    <script>
+        let urlDatabase = {};
+
+        function shortenURL() {
+            let url = document.getElementById('url-input').value;
+            let customURL = document.getElementById('custom-url-input').value;
+            urlDatabase[customURL] = url;
+
+            document.getElementById('result').innerHTML = 
+                "Short URL is: " + window.location.href + customURL;
+        }
+
+        window.onhashchange = function() {
+            let customURL = location.hash.slice(1);
+            if (customURL in urlDatabase) {
+                location.href = urlDatabase[customURL];
+            }
+        }
+    </script>
+</body>
+</html>
