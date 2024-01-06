@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://suustore.com/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
+
+    <!-- Bootstrap CSS v5.2.1 -->
+
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://suustore.com/assets/frontend/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/app.css">
+
+
+
+    <script>
+        window.SuuTruyen = {
+            baseUrl: 'https://suustore.com',
+            urlCurrent: 'https://suustore.com',
+            csrfToken: '4EebYu2rWivdRk1ET12dyuY0CJjpRERhJynPtvUy'
+        }
+    </script>
+
+    <title>Demo Truyện</title>
+    <meta name="description"
+        content="Đọc truyện online, truyện hay. Demo Truyện luôn tổng hợp và cập nhật các chương truyện một cách nhanh nhất.">
+</head>
+
+<body>
+    <header class="header d-none d-lg-block">
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-lg navbar-dark header__navbar p-md-0">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/images/logo_text.png" alt="Logo Suu Truyen" srcset="" class="img-fluid"
+                        style="width: 200px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Thể loại
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item" href="category.html">Ngôn
+                                        Tình</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Trọng
+                                        Sinh</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Cổ Đại</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Tiên
+                                        Hiệp</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Ngược</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Khác</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Dị Giới</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Huyền
+                                        Huyễn</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Xuyên
+                                        Không</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Sủng</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Cung Đấu</a>
+                                </li>
+                                <li><a class="dropdown-item" href="category.html">Gia Đấu</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Theo số chương
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-custom">
+                                <li><a class="dropdown-item" href="#">Dưới
+                                        100</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">100
+                                        - 500</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">500
+                                        - 1000</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Trên
+                                        1000</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="form-check form-switch me-3 d-flex align-items-center">
+                        <label class="form-check-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-brightness-high" viewBox="0 0 16 16" style="fill: #fff;">
+                                <path
+                                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+                                </path>
+                            </svg>
+                        </label>
+                        <input class="form-check-input theme_mode" type="checkbox"
+                            style="transform: scale(1.3); margin-left: 12px; margin-right: 12px;">
+
+                        <label class="form-check-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 384 512"
+                                style="fill: #fff;">
+                                <path
+                                    d="M144.7 98.7c-21 34.1-33.1 74.3-33.1 117.3c0 98 62.8 181.4 150.4 211.7c-12.4 2.8-25.3 4.3-38.6 4.3C126.6 432 48 353.3 48 256c0-68.9 39.4-128.4 96.8-157.3zm62.1-66C91.1 41.2 0 137.9 0 256C0 379.7 100 480 223.5 480c47.8 0 92-15 128.4-40.6c1.9-1.3 3.7-2.7 5.5-4c4.8-3.6 9.4-7.4 13.9-11.4c2.7-2.4 5.3-4.8 7.9-7.3c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-3.7 .6-7.4 1.2-11.1 1.6c-5 .5-10.1 .9-15.3 1c-1.2 0-2.5 0-3.7 0c-.1 0-.2 0-.3 0c-96.8-.2-175.2-78.9-175.2-176c0-54.8 24.9-103.7 64.1-136c1-.9 2.1-1.7 3.2-2.6c4-3.2 8.2-6.2 12.5-9c3.1-2 6.3-4 9.6-5.8c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-3.6-.3-7.1-.5-10.7-.6c-2.7-.1-5.5-.1-8.2-.1c-3.3 0-6.5 .1-9.8 .2c-2.3 .1-4.6 .2-6.9 .4z">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+
+                    <form class="d-flex header__form-search" action="" method="GET">
+                        <input class="form-control search-story" type="text" placeholder="Tìm kiếm" name="key_word"
+                            value="">
+                        <div class="col-12 search-result shadow no-result d-none">
+                            <div class="card text-white bg-light">
+                                <div class="card-body p-0">
+                                    <ul class="list-group list-group-flush d-none">
+                                        <li class="list-group-item">
+                                            <a href="#" class="text-dark hover-title">Tự cẩm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                </path>
+                            </svg>
+
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header-mobile d-sm-block d-lg-none">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/images/logo_text.png" alt="Logo Suu Truyen" srcset="" class="img-fluid"
+                        style="width: 200px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark w-75" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img src="./assets/images/logo_text.png" alt="Logo Suu Truyen" srcset="" class="img-fluid"
+                            style="width: 200px;">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mb-3">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="https://suustore.com/#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Thể loại
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-custom">
+                                    <li><a class="dropdown-item" href="#">Mạt
+                                            Thế</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Xuyên
+                                            Nhanh</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Hệ
+                                            Thống</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Nữ
+                                            Cường</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="form-check form-switch d-flex align-items-center mb-3 p-0">
+                            <label class="form-check-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-brightness-high" viewBox="0 0 16 16" style="fill: #fff;">
+                                    <path
+                                        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+                                    </path>
+                                </svg>
+                            </label>
+                            <input class="form-check-input theme_mode" type="checkbox"
+                                style="transform: scale(1.3); margin-left: 12px; margin-right: 12px;">
+
+                            <label class="form-check-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 384 512"
+                                    style="fill: #fff;">
+                                    <path
+                                        d="M144.7 98.7c-21 34.1-33.1 74.3-33.1 117.3c0 98 62.8 181.4 150.4 211.7c-12.4 2.8-25.3 4.3-38.6 4.3C126.6 432 48 353.3 48 256c0-68.9 39.4-128.4 96.8-157.3zm62.1-66C91.1 41.2 0 137.9 0 256C0 379.7 100 480 223.5 480c47.8 0 92-15 128.4-40.6c1.9-1.3 3.7-2.7 5.5-4c4.8-3.6 9.4-7.4 13.9-11.4c2.7-2.4 5.3-4.8 7.9-7.3c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-3.7 .6-7.4 1.2-11.1 1.6c-5 .5-10.1 .9-15.3 1c-1.2 0-2.5 0-3.7 0c-.1 0-.2 0-.3 0c-96.8-.2-175.2-78.9-175.2-176c0-54.8 24.9-103.7 64.1-136c1-.9 2.1-1.7 3.2-2.6c4-3.2 8.2-6.2 12.5-9c3.1-2 6.3-4 9.6-5.8c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-3.6-.3-7.1-.5-10.7-.6c-2.7-.1-5.5-.1-8.2-.1c-3.3 0-6.5 .1-9.8 .2c-2.3 .1-4.6 .2-6.9 .4z">
+                                    </path>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <form class="d-flex header__form-search" action="" method="GET">
+                            <input class="form-control search-story" type="text" placeholder="Tìm kiếm" name="key_word"
+                                value="">
+                            <div class="col-12 search-result shadow no-result d-none">
+                                <div class="card text-white bg-light">
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush d-none">
+                                            <li class="list-group-item">
+                                                <a href="#" class="text-dark hover-title">Tự
+                                                    cẩm</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn" type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                    </path>
+                                </svg>
+
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="bg-light header-bottom">
+        <div class="container py-1">
+            <p class="mb-0">Đọc truyện online, đọc truyện chữ, truyện full, truyện hay. Tổng hợp đầy đủ và cập nhật liên
+                tục.</p>
+        </div>
+    </div>
+
+
+    <main>
+        <div class="chapter-wrapper container my-5">
+            <a href="#" class="text-decoration-none">
+                <h1 class="text-center text-success">Nàng Không Muốn Làm Hoàng Hậu</h1>
+            </a>
+            <a href="#" class="text-decoration-none">
+                <p class="text-center text-dark">Chương 1: Nàng không tin Yến Đình lại lừa nàng chuyện lớn đến vậy!</p>
+            </a>
+            <hr class="chapter-start container-fluid">
+            <div class="chapter-nav text-center">
+                <div class="chapter-actions chapter-actions-origin d-flex align-items-center justify-content-center">
+                    <a class="btn btn-success me-1 chapter-prev"
+                        href="#" title=""> <span>Chương
+                        </span>trước</a>
+                    <button class="btn btn-success chapter_jump me-1" data-story-id="3" data-slug-chapter="chuong-1"
+                        data-slug-story="nang-khong-muon-lam-hoang-hau">
+                        <span>
+                            <svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+                                </path>
+                            </svg>
+
+                        </span>
+                    </button>
+
+                    <div class="dropdown select-chapter me-1 d-none">
+                        <a class="btn btn-secondary dropdown-toggle" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Chọn chương
+                        </a>
+
+                        <ul class="dropdown-menu select-chapter__list" aria-labelledby="dropdownMenuLink">
+
+                        </ul>
+                    </div>
+                    <a class="btn btn-success chapter-next"
+                        href="https://suustore.com/nang-khong-muon-lam-hoang-hau/chuong-2" title=""><span>Chương
+                        </span>tiếp</a>
+                </div>
+            </div>
+            <hr class="chapter-end container-fluid">
+
+
+            <div class="chapter-content mb-3">
+                <div class="visible-md visible-lg ads-responsive incontent-ad" id="ads-chapter-pc-top" align="center"
+                    style="height:90px"></div>Mưa vào mùa hè thường kéo đến rất nhanh, rõ ràng vừa rồi trời quang mây
+                tạnh, vậy mà chớp mắt, mây đen giăng kín, mưa rơi nặng hạt.<div class="py-2"></div>
+                <div class="py-2"></div>Trên mạn thuyền, nước mưa như những hạt châu nhảy múa, làm ướt tà váy màu thiên
+                thanh. Vân Kiều nhìn về bến tàu gần đó, đến khi Nguyên Anh giục, nàng mới nhấc váy vào thuyền tránh mưa.
+                <div class="py-2"></div>
+                <div class="py-2"></div>“Ta thấy mưa này nhanh đến nhanh đi, đến chiều sẽ tạnh thôi!” Nguyên Anh bình
+                thản rót trà rồi đẩy đến trước mặt nàng, giọng điệu trêu chọc: “Ta biết ngươi muốn được gặp phu quân
+                sớm, nhưng cũng không nên gấp gáp như vậy!”<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều dở khóc dở cười, nàng về chỗ ngồi, rồi lại nhìn ra ngoài qua nửa cánh
+                cửa sổ.<div class="py-2"></div>
+                <div class="py-2"></div>Dù trời mưa to, song, dòng người vẫn tấp nập qua lại trên bến tàu. Hàng hoá của
+                lái buôn ở đó vẫn còn dang dở, mọi người vội vàng lấy vải che lại.<div class="py-2"></div>
+                <div class="py-2"></div>Những tòa lâu san sát nhau và con đường rộng lớn ở đằng xa mờ ảo. Càng ra xa,
+                tầm nhìn càng không được rõ.<div class="py-2"></div>
+                <div class="py-2"></div>“Ta còn chưa hỏi..” Nguyên Anh nhẹ vỗ lên bàn, hỏi nàng: “Ngươi tìm Yến lang của
+                ngươi bằng cách nào?”<div class="py-2"></div>
+                <div class="py-2"></div>Nhắc đến chuyện này, mặt Vân Kiều lộ ra vài phần bất lực, nàng nâng chén trà lên
+                rồi nói: “Vào kinh rồi tìm hiểu sau. Hắn đã thi đậu rồi thì trên nha môn sẽ lưu lại tên hắn, bỏ chút
+                công tìm kiếm thì cũng sẽ ra!”<div class="py-2"></div>
+                <div class="py-2"></div>Nói xong, nàng nghiến răng: “Đến lúc đó ta sẽ tính sổ với hắn!”<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Phụ mẫu của Vân Kiều mất sớm, những năm gần đây nàng làm ăn nhỏ, lại còn có một
+                phu quân như Yến Đình, mỗi ngày trôi qua khiến nàng vô cùng hài lòng.<div class="py-2"></div>
+                <div class="py-2"></div>Nàng không có khát vọng gì to lớn, cũng không buộc phu quân phải vươn cao, cứ an
+                nhàn sống ở trấn Quế Hoa này đã là tốt lắm rồi.<div class="py-2"></div>
+                <div class="py-2"></div>Hồi đầu năm, trước khi Yến Đình lên kinh đi thi, hai người đã nói rõ với nhau.
+                <div class="py-2"></div>
+                <div class="py-2"></div>Nếu hắn đậu cao trung, dù ở kinh thành hay đến nơi khác nhậm chức cũng được,
+                nàng đều đi theo hắn. Nếu chẳng may thi rớt cũng không sao, hắn về nhà muốn làm cái gì nàng cũng chiều
+                ý.<div class="py-2"></div>
+                <div class="py-2"></div>Nhưng thực tế, sau khi Yến Đình được đề tên lên bảng vàng, hắn sai người gửi một
+                phong thư về nhà. Trên thư hắn nói hắn đã thi đậu, nhưng không nói hạng thứ mấy, cũng không đề cập đến
+                dự định sau này, hắn chỉ dặn Vân Kiều an tâm ở nhà đợi một thời gian, đợi đến khi xong chuyện hắn sẽ
+                quay về đón nàng.<div class="py-2"></div>
+                <div class="py-2"></div>Cái này không giống phong thái của Yến Đình, trước giờ hắn làm việc đều chu đáo,
+                ổn thoả, hiếm khi nào nói kiểu mập mờ thế này.<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều đọc đi đọc lại tin tức trong tay, rõ ràng giọng điệu cùng nét chữ vô
+                cùng quen thuộc nhưng từng câu từng chữ đều kỳ quái, thậm chí còn khiến nàng suy đoán lung tung.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Nàng tin vào nhân phẩm của Yến Đình cũng như đôi mắt của mình, cho nên nàng
+                không nghi ngờ hắn sẽ giống như những nam nhân trong sách, sau khi đậu cao trung sẽ bạc tình bạc nghĩa
+                phụ bỏ tào khang.<div class="py-2"></div>
+                <div class="py-2"></div>Nhưng làm phu thê với nhau hai năm, trực giác nói cho nàng biết trong chuyện
+                này, Yến Đình tám phần là đang giấu nàng chuyện gì đó.<div class="py-2"></div>
+                <div class="py-2"></div>Vừa lúc Nguyên Anh từ Dương Châu về Trường An, nhân tiện chở theo hàng hoá hương
+                liệu của nàng. Ban đầu, Vân Kiều hơi do dự, sau còn thêm một nguyên nhân khác, cho nên nàng quyết định
+                theo Nguyên Anh đến Trường An.<div class="py-2"></div>
+                <div class="py-2"></div>Buổi trưa, cơn mưa dần ngớt, nhưng vẫn không có ý định tạnh hẳn.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>“Việc ở đây không phải lo!” Nguyên Anh phủi phủi ống tay áo, thương lượng với
+                Vân Kiều: “Để người của Ngô bá lên thuyền trông coi, đợi mưa tạnh sẽ có người dỡ hàng, trước mắt chúng
+                ta đưa muội muội của ngươi xuống thuyền, dạo chơi xung quanh một chút!”<div class="py-2"></div>
+                <div class="py-2"></div>“Được!” Vân Kiều đồng ý, nàng đi vào bên trong gọi Thiên Thiên.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Thiên Thiên mang họ Từ, nàng ấy là nữ nhi độc nhất của di (dì) Vân Kiều.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Từ gia không phải là con người, không biết bọn họ làm cách nào để giao thiệp
+                được với tri phủ, bọn họ muốn gả Thiên Thiên cho tri phủ đại nhân, cái người đáng bằng tuổi cha nàng ấy.
+                <div class="py-2"></div>
+                <div class="py-2"></div>Mẫu thân nàng ấy đã mất sớm, người đầu têu cho việc này là kế mẫu. Từ Thiên
+                Thiên không còn nơi nào để cầu cứu, cuối cùng nhân lúc mấy bà tử uống rượu đánh bạc, vào đếm tối, nàng
+                chạy trốn đến trấn của Vân Kiều cầu cứu.<div class="py-2"></div>
+                <div class="py-2"></div>Nàng là một nữ tử yếu đuối chưa từng bước chân ra khỏi khuê phòng, chạy một mạch
+                đến đây, bộ dạng chật vật vô cùng, bàn chân bị mài mòn loang lổ vết máu, càng làm bộ dạng nàng đáng
+                thương đến cực điểm.<div class="py-2"></div>
+                <div class="py-2"></div>Sau khi Vân Kiều biết được chân tướng, nàng đã vô cùng tức giận.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Nàng rất rõ tác phong làm việc của Từ gia,&nbsp;<div class="py-2"></div>
+                <div class="py-2"></div>dù có chướng mắt di phụ (dượng) nhưng suy cho cùng Thiên Thiên cũng mang họ Từ,
+                nàng là biểu tỷ khác họ muốn nhúng tay vào e là không thể. Chờ đến khi Từ gia tìm đến cửa đòi người,
+                chưa chắc nàng có thể bảo vệ được nàng ấy.<div class="py-2"></div>
+                <div class="py-2"></div>Đúng lúc Nguyên Anh đến, sau khi cân nhắc vài lần, nàng quyết định chống đối lại
+                Từ gia, đưa Thiên Thiên rời khỏi Bình thành.<div class="py-2"></div>
+                <div class="py-2"></div>Thân thể Thiên Thiên suy nhược, sau khi lên thuyền đã bị say sóng nặng, phần lớn
+                thời gian đều ở trong phòng nghỉ ngơi, buồn bã yểu xìu. Đến khi theo Vân Kiều xuống thuyền, bàn chân
+                giẫm lên được mặt đất cứng rắn, nàng mới khá lên được một chút.<div class="py-2"></div>
+                <div class="py-2"></div>Từ Thiên Thiên nấp dưới ô của Vân Kiều nhìn bến tàu náo nhiệt rồi đến con phố
+                rộng lớn bằng phẳng: “Vân tỷ, đây là Trường An sao?”<div class="py-2"></div>
+                <div class="py-2"></div>Dưới màn mưa bụi bao phủ, hiện ra nơi phồn hoa lộng lẫy.<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều quan sát xung quanh, dù nàng đã sớm nghe người ta nhắc đến sự hưng
+                thịnh và phong thái của kinh thành nhưng khi được nhìn tận mắt mới cảm nhận được cái gì gọi là “Hoàng
+                thành”.<div class="py-2"></div>
+                <div class="py-2"></div>Nguyên Anh sinh ra ở Trường An, đối với mọi thứ nơi đây nàng đã quen. Nàng chậm
+                rãi đi phía trước dẫn đường, rồi kể cho các nàng nghe về cảnh sắc ở kinh thành.<div class="py-2"></div>
+                <div class="py-2"></div>Sau cơn mưa, có thể nhìn rõ được những đám mây bay trên đỉnh núi cao chập chùng.
+                Trên đó có Tướng Quốc Tự vang danh thiên hạ, hai tòa lầu cao ở bên trên gọi là Minh Nguyệt Đài. Hàng
+                năm, vào dịp tết Nguyên Tiêu, Đế Hậu sẽ bước lên Minh Nguyệt Đài để vui cùng con dân.<div class="py-2">
+                </div>
+                <div class="py-2"></div>Đằng trước kia là cửa hiệu bán đồ trang sức tên Cẩm Tú Các, của hồi môn của nữ
+                quyến cao môn đều mua ở đây, bao gồm tất thảy trang sức, son phấn, bột nước…<div class="py-2"></div>
+                <div class="py-2"></div>“Cái này ta đã từng nghe qua!” Vân Kiều thích thú đánh giá cửa hiệu Cẩm Tú Các
+                “Cũng coi như có chút giao thiệp!”<div class="py-2"></div>
+                <div class="py-2"></div>Nguyên Anh biết được trong đó có gì, nàng cười cười ngầm hiểu ý, sau đó đưa Vân
+                Kiều đến một con phố khác: “Nơi này là khách điếm Như Ý, còn gọi là “Trạng Nguyên Cập Đệ Lâu”!”<div
+                    class="py-2"></div>
+                <div class="py-2"></div>“Bởi vì khách ở nơi này từng đậu 3 vị Trạng Nguyên, 10 vị Bảng Nhãn, Thám Hoa,
+                cho nên sĩ tử vào kinh đi thi sẽ cố gắng dùng nhiều bạc chút để được ở đây, để mượn chút may mắn!”
+                Nguyên Anh giương cằm lên nói với Vân Kiều: “Chúng ta dùng cơm trưa ở đây, thừa dịp hỏi thăm về phu quân
+                ngươi luôn!” Vân Kiều đến mái hiên, gấp ô giấy dầu lại, nói cảm ơn.<div class="py-2"></div>
+                <div class="py-2"></div>Nàng rất rõ, Yến Đình sẽ không tin những chuyện này. Từ trước giờ hắn là người
+                thích yên tĩnh không thích náo nhiệt, không những hắn không đến Trạng Nguyên Cập Đệ Lâu này, mà còn
+                tránh xa nữa là.<div class="py-2"></div>
+                <div class="py-2"></div>Nhưng trên thư Yến Đình không nhắc đến bản thân hắn ở nơi nào của Kinh Thành,
+                trường An lớn như vậy cũng không biết bắt đầu tìm từ đâu, chỉ đành đến đâu hay đến đấy.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Sau khi vào quán, Nguyên Anh gọi những món ăn quen thuộc, còn Vân Kiều thì cho
+                Tiểu nhị một ít tiền rồi hỏi han một chút.<div class="py-2"></div>
+                <div class="py-2"></div>Tiểu nhị của khách điếm Như Ý này rất thật thà, khi nghe hỏi đến người đậu khoa
+                cử ở đầu xuân năm nay, hắn liền cười phấn khởi: “Kim khoa Bảng Nhãn là người trọ ở chỗ chúng tôi, ngày
+                đó tin vui truyền đến cực kỳ náo nhiệt…”<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều nhẫn nại nghe hắn khoe một hồi, chốc chốc lại phụ hoạ vài câu, sau đó
+                mới nói về mục đích của mình đến đây.<div class="py-2"></div>
+                <div class="py-2"></div>“Ngài cứ hỏi,” tiểu nhị niềm nở nói: “Chỉ cần người đã từng ở trọ chỗ chúng ta,
+                người nào có tên trên bảng vàng, ta đều biết cả!”<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều nói tên của Yến Đình, tuy nàng biết không có mấy khả năng, nhưng nhìn
+                ánh mắt của tiểu nhị trong lòng nàng có chút hy vọng.<div class="py-2"></div>
+                <div class="py-2"></div>Trời sinh tướng mạo nàng mỹ miều, có thể gọi là mỹ nhân.<div class="py-2"></div>
+                <div class="py-2"></div>Da trắng, tóc đen, môi đỏ nhưng đẹp nhất vẫn là đôi mắt kia, phía đuôi mắt hơi
+                vểnh lên toát ra dáng vẻ hào hoa, ánh mắt long lanh khiến cho người khác gặp rồi khó quên.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Tiểu nhị bắt gặp ánh mắt trông chờ của nàng có chút giật mình, ngập ngừng nói:
+                “Vị Yến công tử này không ở chỗ khách điếm chúng ta!”<div class="py-2"></div>
+                <div class="py-2"></div>Mí mắt Vân Kiều khẽ run, nàng sớm đã đoán được, nên lúc này cũng không thất vọng
+                lắm, chỉ vô thức thở dài.<div class="py-2"></div>
+                <div class="py-2"></div>Tiểu nhị gãi gãi đầu, rồi nói: “Cũng có thể là vì trí nhớ của ta không tốt, ngài
+                cứ dùng cơm đi, ta sẽ đi hỏi giúp ngài!”<div class="py-2"></div>
+                <div class="py-2"></div>“Vậy làm phiền ngươi rồi!” Vân Kiều cảm tạ rồi quay đầu nhìn thấy ánh mắt lo
+                lắng của Từ Thiên Thiên, nàng cười: “Cứ từ từ tìm thôi, một người lớn như vậy có thể mất tăm tích được
+                sao? Nếu không được thì tốn thêm ít bạc lên quan phủ, cũng sẽ hỏi ra!”<div class="py-2"></div>
+                <div class="py-2"></div>“Muội không cần phải buồn rầu vì chuyện này, cứ ăn uống vui chơi thật tốt, tạm
+                thời xem như chúng ra đến kinh thành giải sầu!”<div class="py-2"></div>
+                <div class="py-2"></div>Từ Thiên Thiên nhích lại gần người nàng nói nhỏ: “Muội nghe theo tỷ!”<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều gắp thức ăn cho nàng, rồi quay sang nói chuyện công việc làm ăn với
+                Nguyên Anh.<div class="py-2"></div>
+                <div class="py-2"></div>Tiếng mưa tí tách rơi trên mái hiên cuối cùng cũng dừng lại, chân trời đã tạnh.
+                Ba người ăn xong bữa trưa, gọi tiểu nhị đến tính tiền. Tiểu nhị nhanh nhẹn tính tiền xong, sau đó nhìn
+                về phía Vân Kiều, muốn nói rồi lại thôi.<div class="py-2"></div>
+                <div class="py-2"></div>“Thế nào rồi?” Lông mày Vân Kiều hơi chau lại, cười nói: “Mặc kệ chuyện là gì,
+                ngươi cứ nói đi!”<div class="py-2"></div>
+                <div class="py-2"></div>Tiểu nhị ngượng ngùng nói: “Người bên ta mới ra ngoài hỏi, cũng lật ra danh sách
+                trúng cử mà chưởng quầy chép lại.. nhưng không có tên của Yến công tử kia…”<div class="py-2"></div>
+                <div class="py-2"></div>Nói cách khác thì Yến Đình không chỉ không trọ ở khách điếm này, thậm chí cũng
+                không có tên trên bảng vàng, hắn thi không đậu.<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều sững sờ.<div class="py-2"></div>
+                <div class="py-2"></div>Phản ứng trong đầu nàng lúc này là…không tin.<div class="py-2"></div>
+                <div class="py-2"></div>Nàng không tin Yến Đình lại lấy chuyện lớn như vậy ra gạt mình.<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Trong thư hắn gửi về nhà rõ ràng là nói thi đậu, sao có thể giả được? Do dù vạn
+                nhất, hắn không may thi rớt, hắn cũng không cần thiết phải nói dối nàng.<div class="py-2"></div>
+                <div class="py-2"></div>Nguyên Anh bên cạnh nhíu mày: “Tiểu ca, ngươi có nhìn lầm không?”<div
+                    class="py-2"></div>
+                <div class="py-2"></div>Tiểu nhị sớm đã chuẩn bị, hắn đưa một đống sổ sách tới: “Chi bằng, các vị tự xem
+                đi?”<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều cắn môi, tiếp nhận sổ sách, chăm chú nhìn từng dòng, từng trang một.
+                <div class="py-2"></div>
+                <div class="py-2"></div>Danh sách tên này sao chép chỉnh tề, ngay hàng thẳng lối, còn dùng mực đỏ khoanh
+                những tên đã từng ở tại khách điếm này.<div class="py-2"></div>
+                <div class="py-2"></div>Vân Kiều lật từ đầu đến cuối vẫn không tìm ra được cái họ tên vô cùng quen thuộc
+                với nàng, sắc mặt nàng tái nhợt, ngón tay mảnh khảnh nắm lại thật chặt.<div class="py-2"></div>
+                <div class="py-2"></div>Việc này giống như để làm nàng tỉnh táo hơn.<div class="py-2"></div>
+                <div class="py-2"></div>Sự thật đã bày ra trước mắt, nàng nghĩ mãi vẫn không thông, tại sao Yến Đình lại
+                dối gạt nàng? Sau một hồi mờ mịt, nàng bỗng lo lắng… Vậy bây giờ Yến Đình đang ở đâu? Rốt cuộc là đã xảy
+                ra chuyện gì?<div class="py-2"></div>
+                <div class="py-2"></div>Không ai ngờ được mọi chuyện lại thành ra thế này, Nguyên Anh và Từ Thiên Thiên
+                đối mặt nhìn nhau, không biết phải phá vỡ sự yên tĩnh này thế nào.<div class="py-2"></div>
+                <div class="py-2"></div>Bỗng trên đường truyền đến tiếng vó ngựa, dường như là có cả một đám ngựa chạy
+                qua.<div class="py-2"></div>
+                <div class="py-2"></div>“Là Ngũ Hoàng tử vừa mới nhận tổ quy tông!” Một thư sinh ở cửa nhận ra, giọng
+                hắn mang theo chút kinh thường cùng một chút hâm mộ: “Chậc, đúng thật là rất uy phong!”
+            </div>
+
+            <div class="text-center px-2 py-2 alert alert-success d-none d-lg-block" role="alert">Bạn có thể dùng phím
+                mũi tên hoặc WASD để
+                lùi/sang chương</div>
+        </div>
+
+        <div class="chapter-actions chapter-actions-mobile d-flex align-items-center justify-content-center">
+            <a class="btn btn-success me-2 chapter-prev"
+                href="#" title=""> <span>Chương
+                </span>trước</a>
+            <button class="btn btn-success chapter_jump me-2" data-story-id="3" data-slug-chapter="chuong-1"
+                data-slug-story="nang-khong-muon-lam-hoang-hau"><span>
+
+                    <svg style="fill: #fff;" xmlns="http://www.w3.org/2000/svg" height="1em"
+                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+                        </path>
+                    </svg>
+                </span></button>
+
+            <div class="dropup select-chapter me-2 d-none">
+                <a class="btn btn-secondary dropdown-toggle" role="button"
+                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Chọn chương
+                </a>
+
+                <ul class="dropdown-menu select-chapter__list" aria-labelledby="dropdownMenuLink">
+
+                </ul>
+            </div>
+            <a class="btn btn-success chapter-next" href="#"
+                title=""><span>Chương </span>tiếp</a>
+        </div>
+    </main>
+
+    <div id="footer" class="footer border-top pt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <strong>Suu Truyện</strong> - <a title="Đọc truyện online" class="text-dark text-decoration-none"
+                        href="#">Đọc truyện</a> online một cách nhanh nhất. Hỗ trợ mọi thiết bị như
+                    di
+                    động và máy tính bảng.
+                </div>
+                <ul class="col-12 col-md-7 list-unstyled d-flex flex-wrap list-tag">
+                    <li class="me-1">
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="đam mỹ hài">đam mỹ
+                                hài</a></span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="truyện xuyên nhanh">truyện
+                                xuyên
+                                nhanh</a></span>
+                    </li>
+                    <li class="me-1">
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="đam mỹ hài">đam mỹ
+                                hài</a></span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="truyện xuyên nhanh">truyện
+                                xuyên
+                                nhanh</a></span>
+                    </li>
+                    <li class="me-1">
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="đam mỹ hài">đam mỹ
+                                hài</a></span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="truyện xuyên nhanh">truyện
+                                xuyên
+                                nhanh</a></span>
+                    </li>
+                    <li class="me-1">
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="đam mỹ hài">đam mỹ
+                                hài</a></span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="truyện xuyên nhanh">truyện
+                                xuyên
+                                nhanh</a></span>
+                    </li>
+                    <li class="me-1">
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="đam mỹ hài">đam mỹ
+                                hài</a></span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="truyện xuyên nhanh">truyện
+                                xuyên
+                                nhanh</a></span>
+                    </li>
+                    <li class="me-1">
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="đam mỹ hài">đam mỹ
+                                hài</a></span>
+                    </li>
+                    <li>
+                        <span class="badge text-bg-light"><a class="text-dark text-decoration-none"
+                                href="#" title="truyện xuyên nhanh">truyện
+                                xuyên
+                                nhanh</a></span>
+                    </li>
+                </ul>
+
+                <div class="col-12"> <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img
+                            alt="Creative Commons License" style="border-width:0;margin-bottom: 10px"
+                            src="./assets/images/88x31.png"></a><br>
+                    <p>Website hoạt động dưới Giấy phép truy cập mở <a rel="license"
+                            class="text-decoration-none text-dark hover-title"
+                            href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+                            International License</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/jquery.min.js">
+    </script>
+
+    <script src="./assets/popper.min.js">
+    </script>
+
+    <script src="./assets/bootstrap.min.js">
+    </script>
+
+
+
+    <script src="./assets/app.js">
+    </script>
+    <script src="./assets/common.js"></script>
+    <script src="./assets/chapter.js"></script>
+
+
+
+    <div id="loadingPage" class="loading-full">
+        <div class="loading-full_icon">
+            <div class="spinner-grow"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
