@@ -1,4 +1,0 @@
-<input type="url" id="txtUrl">
-<button onclick="shortenUrl()">Get my shortened URL</button>
-
-<script src="./main.js"></script>
