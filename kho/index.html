@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .product {
+            margin-bottom: 20px;
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Management</h1>
+
+    <input type="text" id="name-input" placeholder="Product name">
+    <input type="text" id="image-input" placeholder="Image URL">
+    <button onclick="addProduct()">Add Product</button>
+
+    <div id="product-list"></div>
+
+    <script>
+        let products = [];
+
+        function addProduct() {
+            let name = document.getElementById('name-input').value;
+            let image = document.getElementById('image-input').value;
+            products.push({ name, image });
+
+            document.getElementById('name-input').value = '';
+            document.getElementById('image-input').value = '';
+
+            renderProducts();
+        }
+
+        function deleteProduct(index) {
+            products.splice(index, 1);
+            renderProducts();
+        }
+
+        function renderProducts() {
+            let productList = document.getElementById('product-list');
+            productList.innerHTML = '';
+
+            for (let i = 0; i < products.length; i++) {
+                let product = document.createElement('div');
+                product.className = 'product';
+                product.innerHTML = `
+                    <img src="${products[i].image}" alt="${products[i].name}">
+                    <p>${products[i].name}</p>
+                    <button onclick="deleteProduct(${i})">Delete</button>
+                `;
+                productList.appendChild(product);
+            }
+        }
+    </script>
+</body>
+</html>
