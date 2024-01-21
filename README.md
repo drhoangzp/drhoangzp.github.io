@@ -10,3 +10,7 @@ irm https://drhoangzp.github.io/get.ps1 | iex
 ```
 irm https://drhoangzp.github.io/checkinfo.ps1 | iex
 ```
+## Costum windows
+```
+irm https://drhoangzp.github.io/winutil.ps1 | iex
+```
