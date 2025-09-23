@@ -14,3 +14,7 @@ irm https://drhoangzp.github.io/checkinfo.ps1 | iex
 ```
 irm https://drhoangzp.github.io/winutil.ps1 | iex
 ```
+## Info windows 7
+```
+iex (Invoke-WebRequest -UseBasicParsing https://drhoangzp.github.io/win7.ps1).Content
+```
