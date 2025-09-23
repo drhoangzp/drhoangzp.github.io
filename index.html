@@ -35,6 +35,7 @@
       border-radius: 3px;
       cursor: pointer;
       font-size: 12px;
+      transition: background-color 0.2s;
     }
 
     .copy-btn:hover {
@@ -72,32 +73,41 @@
   <h2>Active</h2>
   <div class="code-block">
     <code id="code1">irm https://drhoangzp.github.io/get.ps1 | iex</code>
-    <button class="copy-btn" onclick="copyToClipboard('code1')">Copy</button>
+    <button class="copy-btn" onclick="copyToClipboard('code1', this)">Copy</button>
   </div>
 
   <h2>Info Windows</h2>
   <div class="code-block">
     <code id="code2">irm https://drhoangzp.github.io/checkinfo.ps1 | iex</code>
-    <button class="copy-btn" onclick="copyToClipboard('code2')">Copy</button>
+    <button class="copy-btn" onclick="copyToClipboard('code2', this)">Copy</button>
   </div>
 
   <h2>Costum Windows</h2>
   <div class="code-block">
     <code id="code3">irm https://drhoangzp.github.io/winutill.ps1 | iex</code>
-    <button class="copy-btn" onclick="copyToClipboard('code3')">Copy</button>
+    <button class="copy-btn" onclick="copyToClipboard('code3', this)">Copy</button>
   </div>
 
   <h2>Info Windows 7</h2>
   <div class="code-block">
     <code id="code4">iex (Invoke-WebRequest -UseBasicParsing https://drhoangzp.github.io/win7.ps1).Content</code>
-    <button class="copy-btn" onclick="copyToClipboard('code4')">Copy</button>
+    <button class="copy-btn" onclick="copyToClipboard('code4', this)">Copy</button>
   </div>
 
   <script>
-    function copyToClipboard(elementId) {
+    function copyToClipboard(elementId, button) {
       const code = document.getElementById(elementId).textContent;
       navigator.clipboard.writeText(code).then(() => {
-        alert("Đã copy!");
+        // Thay đổi nút thành "Copied!"
+        const originalText = button.textContent;
+        button.textContent = "Copied!";
+        button.disabled = true;
+
+        // Sau 2 giây quay lại "Copy"
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.disabled = false;
+        }, 2000);
       }).catch(err => {
         console.error("Lỗi copy: ", err);
       });
