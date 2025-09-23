@@ -2,6 +2,33 @@
 $systemInfo = Get-CimInstance Win32_OperatingSystem
 $bios = Get-WmiObject -Class Win32_BIOS
 
+# Lấy thông tin hệ thống
+$cs = Get-CimInstance -ClassName Win32_ComputerSystem
+
+# Giải thích ý nghĩa của giá trị PCSystemType
+$pcTypeMap = @{
+    0 = "Unknown"              # Không xác định
+    1 = "Desktop"              # Máy tính để bàn
+    2 = "Laptop"               # Máy tính xách tay
+    3 = "Portable"             # Máy tính cầm tay
+    4 = "Workstation"          # Máy trạm
+    5 = "Enterprise Server"    # Máy chủ doanh nghiệp
+    6 = "Mainframe"            # Máy trung tâm
+    7 = "Tablet"               # Máy tính bảng
+    8 = "Handheld"             # Thiết bị cầm tay
+    9 = "Thin Client"          # Máy trạm mỏng
+    10 = "Virtual Machine"     # Máy ảo
+    11 = "Not Categorized"     # Không thể phân loại
+}
+
+# Hiển thị kết quả
+$pcTypeValue = $cs.PCSystemType
+$pcTypeDescription = $pcTypeMap[$pcTypeValue]
+
+Write-Host "Device Type: $pcTypeDescription (Code: $pcTypeValue)"
+Write-Host "`nSystem Information:"
+$cs | Select-Object Manufacturer, Model, PCSystemType | Format-List
+
 # Lấy thời gian hiện tại
 $currentTime = Get-Date
 
