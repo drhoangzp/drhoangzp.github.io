@@ -3,7 +3,7 @@ $systemInfo = Get-CimInstance Win32_OperatingSystem
 $bios = Get-WmiObject -Class Win32_BIOS
 
 # Lấy thông tin hệ thống
-$pcTypeValue = (Get-CimInstance -ClassName Win32_ComputerSystem).PCSystemType
+$pcTypeValue = [int](Get-CimInstance -ClassName Win32_ComputerSystem).PCSystemType
 
 # Giải thích ý nghĩa của giá trị PCSystemType
 $pcTypeMap = @{
