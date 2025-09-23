@@ -3,7 +3,7 @@ $systemInfo = Get-CimInstance Win32_OperatingSystem
 $bios = Get-WmiObject -Class Win32_BIOS
 
 # Lấy thông tin hệ thống
-$cs = Get-CimInstance -ClassName Win32_ComputerSystem
+$pcTypeValue = (Get-CimInstance -ClassName Win32_ComputerSystem).PCSystemType
 
 # Giải thích ý nghĩa của giá trị PCSystemType
 $pcTypeMap = @{
@@ -21,14 +21,6 @@ $pcTypeMap = @{
     11 = "Not Categorized"     # Không thể phân loại
 }
 
-# Hiển thị kết quả
-$pcTypeValue = $cs.PCSystemType
-$pcTypeDescription = $pcTypeMap[$pcTypeValue]
-
-Write-Host "Device Type: $pcTypeDescription (Code: $pcTypeValue)"
-Write-Host "`nSystem Information:"
-$cs | Select-Object Manufacturer, Model, PCSystemType | Format-List
-
 # Lấy thời gian hiện tại
 $currentTime = Get-Date
 
@@ -44,6 +36,9 @@ Write-Host ""
 Write-Host "Hostname: $($computerSystem.Name)"
 Write-Host ""
 Write-Host "Model: $($computerSystem.Model)"
+Write-Host ""
+# Output only the desired line
+Write-Host "PCSystemType: $pcTypeValue - $($pcTypeMap[$pcTypeValue])"
 Write-Host ""
 Write-Host "Serial Number: $($bios.SerialNumber)"
 Write-Host ""
