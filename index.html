@@ -1,17 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Welcome to drhoangzp.github.io</title>
+  <meta charset="UTF-8">
+  <title>drhoangzp.github.io</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    .code-block {
+      position: relative;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px 40px 10px 10px;
+      margin-bottom: 20px;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .copy-btn:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      margin-bottom: 30px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to drhoangzp.github.io</h1>
-    <h2>Các repository khác mà bạn có thể ghé qua:</h2>
-    <ul>
-        <li><a href="https://github.com/drhoangzp/win">Các lệnh chạy trong Windows</a></li>
-    </ul>
-    <h3>Các web con khác mà bạn có thể ghé qua:</h3>
-    <ul>
-        <li><a href="https://drhoangzp.github.io/game">Trang web game</a></li>
-    </ul>
+
+  <h1>Welcome to <a href="https://drhoangzp.github.io" target="_blank">drhoangzp.github.io</a></h1>
+
+  <h2>Các repository khác mà bạn có thể ghé qua:</h2>
+  <ul>
+      <li><a href="https://github.com/drhoangzp/win" target="_blank">Các lệnh chạy trong Windows</a></li>
+  </ul>
+
+  <h3>Các web con khác mà bạn có thể ghé qua:</h3>
+  <ul>
+      <li><a href="https://drhoangzp.github.io/game" target="_blank">Trang web game</a></li>
+  </ul>
+
+  <h2>Active</h2>
+  <div class="code-block">
+    <code id="code1">irm https://drhoangzp.github.io/get.ps1 | iex</code>
+    <button class="copy-btn" onclick="copyToClipboard('code1')">Copy</button>
+  </div>
+
+  <h2>Info Windows</h2>
+  <div class="code-block">
+    <code id="code2">irm https://drhoangzp.github.io/checkinfo.ps1 | iex</code>
+    <button class="copy-btn" onclick="copyToClipboard('code2')">Copy</button>
+  </div>
+
+  <h2>Costum Windows</h2>
+  <div class="code-block">
+    <code id="code3">irm https://drhoangzp.github.io/winutill.ps1 | iex</code>
+    <button class="copy-btn" onclick="copyToClipboard('code3')">Copy</button>
+  </div>
+
+  <h2>Info Windows 7</h2>
+  <div class="code-block">
+    <code id="code4">iex (Invoke-WebRequest -UseBasicParsing https://drhoangzp.github.io/win7.ps1).Content</code>
+    <button class="copy-btn" onclick="copyToClipboard('code4')">Copy</button>
+  </div>
+
+  <script>
+    function copyToClipboard(elementId) {
+      const code = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        alert("Đã copy!");
+      }).catch(err => {
+        console.error("Lỗi copy: ", err);
+      });
+    }
+  </script>
+
 </body>
 </html>
