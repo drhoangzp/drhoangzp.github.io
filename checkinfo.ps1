@@ -80,6 +80,8 @@ Write-Host "ROM :"
 
 Get-PhysicalDisk | Format-Table FriendlyName,MediaType,Size -AutoSize
 
+Get-PSDrive -PSProvider 'FileSystem'
+
 Write-Host "CPU :"
 # Lấy thông tin về bộ xử lý
 $processor = Get-CimInstance Win32_Processor
