@@ -91,8 +91,8 @@ del /q /f %LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db
 del /q /f /s "%LOCALAPPDATA%\Microsoft\Windows\INetCache\*" 
 del /q /f /s C:\Windows\Prefetch\*
 echo ---------------------------------------
-echo Da tat Windows Update xong
-echo Nhan 1 de don dep may tinh
+echo Da don dep xong
+echo Nhan 1 de tat Window Update
 echo Nhan 0 de quay lai menu chinh
 :wait0a
 set /p choice=Nhap lua chon: 
@@ -117,17 +117,18 @@ net stop bits
 sc config wuauserv start= disabled
 sc config bits start= disabled
 echo ---------------------------------------
-echo Da don dep xong
-echo Nhan 1 de tat Window Update
+echo Da tat Windows Update xong
+echo Nhan 1 de don dep may tinh
 echo Nhan 0 de quay lai menu chinh
 :wait0a
 set /p choice=Nhap lua chon: 
-if "%choice%"=="1" goto update
+if "%choice%"=="1" goto clean
 if "%choice%"=="0" goto menu
 goto wait0a
 
 :exit
 exit
+
 
 
 
