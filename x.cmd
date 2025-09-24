@@ -12,15 +12,32 @@ echo 5. Tat Windows Update
 echo 6. Don dep may tinh
 echo 0. Thoat
 echo ===============================
-set /p choice=Nhap lua chon (1-6, 0 de thoat): 
+set /p choice=Nhap lua chon (1-6, 5 6 hoac 56, 0 de thoat): 
 
-if "%choice%"=="1" goto get
-if "%choice%"=="2" goto checkinfo
-if "%choice%"=="3" goto checkwin7
-if "%choice%"=="4" goto winutil
-if "%choice%"=="5" goto update
-if "%choice%"=="6" goto clean
-if "%choice%"=="0" goto exit
+#if "%choice%"=="1" goto get
+#if "%choice%"=="2" goto checkinfo
+#if "%choice%"=="3" goto checkwin7
+#if "%choice%"=="4" goto winutil
+#if "%choice%"=="5" goto update
+#if "%choice%"=="6" goto clean
+#if "%choice%"=="0" goto exit
+
+:: Loai bo cac khoang trang trong input
+set "choice=%choice: =%"
+
+:: Kiem tra tung lua chon
+echo.
+if not "%choice%"=="" (
+    echo Dang xu ly lua chon...
+
+    echo %choice% | find "1" >nul && call :get
+    echo %choice% | find "2" >nul && call :checkinfo
+    echo %choice% | find "3" >nul && call :checkwin7
+    echo %choice% | find "4" >nul && call :winutil
+    echo %choice% | find "5" >nul && call :update
+    echo %choice% | find "6" >nul && call :clean
+    echo %choice% | find "0" >nul && goto exit
+)
 
 echo Lua chon khong hop le. Vui long nhap lai.
 pause
@@ -114,5 +131,6 @@ goto wait0a
 
 :exit
 exit
+
 
 
