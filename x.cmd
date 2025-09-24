@@ -9,15 +9,17 @@ echo 2. Kiem tra Windows 10/11
 echo 3. Kiem tra Windows 7
 echo 4. Tuy chinh Windows
 echo 5. Tat Windows Update
+echo 6. Don dep may tinh
 echo 0. Thoat
 echo ===============================
-set /p choice=Nhap lua chon (1-5, 0 de thoat): 
+set /p choice=Nhap lua chon (1-6, 0 de thoat): 
 
 if "%choice%"=="1" goto get
 if "%choice%"=="2" goto checkinfo
 if "%choice%"=="3" goto checkwin7
 if "%choice%"=="4" goto winutil
 if "%choice%"=="5" goto update
+if "%choice%"=="6" goto clean
 if "%choice%"=="0" goto exit
 
 echo Lua chon khong hop le. Vui long nhap lai.
@@ -38,7 +40,7 @@ goto wait0a
 
 :checkinfo
 cls
-echo ==== Kiem tra thong tin (Moi nhat) ====
+echo ==== Kiem tra thong so Windows 10/11 ====
 echo Dang chay script...
 powershell -Command "irm https://drhoangzp.github.io/checkinfo.ps1 | iex"
 echo ---------------------------------------
@@ -50,7 +52,7 @@ goto wait0a
 
 :checkwin7
 cls
-echo ==== Kiem tra tren Windows 7 ====
+echo ==== Kiem tra thong so Windows 7 ====
 echo Dang chay script...
 powershell -Command "iex (Invoke-WebRequest -UseBasicParsing https://drhoangzp.github.io/win7.ps1).Content"
 echo ---------------------------------------
@@ -62,7 +64,7 @@ goto wait0b
 
 :winutil
 cls
-echo ==== Tuy chinh Windows====
+echo ==== Tuy chinh Windows ====
 echo Dang chay script...
 powershell -Command "irm https://drhoangzp.github.io/winutil.ps1 | iex"
 echo ---------------------------------------
@@ -72,9 +74,24 @@ set /p back=Nhap 0 de quay lai:
 if "%back%"=="0" goto menu
 goto wait0a
 
+:clean
+cls
+echo ==== Don dep may tinh ====
+echo Dang chay script...
+del /q /f /s %TEMP%\* 
+del /q /f %LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db 
+del /q /f /s "%LOCALAPPDATA%\Microsoft\Windows\INetCache\*" 
+del /q /f /s C:\Windows\Prefetch\*
+echo ---------------------------------------
+echo Nhan 0 de quay lai menu chinh
+:wait0a
+set /p back=Nhap 0 de quay lai: 
+if "%back%"=="0" goto menu
+goto wait0a
+
 :update
 cls
-echo ==== Tat Windows Update====
+echo ==== Tat Windows Update ====
 echo Dang chay script...
 @echo off
 :: Kiểm tra quyền Admin bằng cách ghi vào thư mục system
@@ -97,4 +114,5 @@ goto wait0a
 
 :exit
 exit
+
 
