@@ -12,15 +12,15 @@ echo 5. Tat Windows Update
 echo 6. Don dep may tinh
 echo 0. Thoat
 echo ===============================
-set /p choice=Nhap lua chon (1-6, 5 6 hoac 56, 0 de thoat): 
+set /p choice=Nhap lua chon (1-6, 0 de thoat): 
 
-#if "%choice%"=="1" goto get
-#if "%choice%"=="2" goto checkinfo
-#if "%choice%"=="3" goto checkwin7
-#if "%choice%"=="4" goto winutil
-#if "%choice%"=="5" goto update
-#if "%choice%"=="6" goto clean
-#if "%choice%"=="0" goto exit
+if "%choice%"=="1" goto get
+if "%choice%"=="2" goto checkinfo
+if "%choice%"=="3" goto checkwin7
+if "%choice%"=="4" goto winutil
+if "%choice%"=="5" goto update
+if "%choice%"=="6" goto clean
+if "%choice%"=="0" goto exit
 
 :: Loai bo cac khoang trang trong input
 set "choice=%choice: =%"
@@ -95,15 +95,26 @@ goto wait0a
 cls
 echo ==== Don dep may tinh ====
 echo Dang chay script...
+@echo off
+:: Kiểm tra quyền Admin bằng cách ghi vào thư mục system
+>nul 2>&1 net session
+if %errorLevel% NEQ 0 (
+    echo Dang yeu cau quyen Administrator...
+    powershell -Command "Start-Process '%~f0' -Verb runAs"
+    exit /b
+)
 del /q /f /s %TEMP%\* 
 del /q /f %LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db 
 del /q /f /s "%LOCALAPPDATA%\Microsoft\Windows\INetCache\*" 
 del /q /f /s C:\Windows\Prefetch\*
 echo ---------------------------------------
+echo Da tat Windows Update xong
+echo Nhan 1 de don dep may tinh
 echo Nhan 0 de quay lai menu chinh
 :wait0a
-set /p back=Nhap 0 de quay lai: 
-if "%back%"=="0" goto menu
+set /p choice=Nhap lua chon: 
+if "%choice%"=="1" goto update
+if "%choice%"=="0" goto menu
 goto wait0a
 
 :update
@@ -123,14 +134,18 @@ net stop bits
 sc config wuauserv start= disabled
 sc config bits start= disabled
 echo ---------------------------------------
+echo Da don dep xong
+echo Nhan 1 de tat Window Update
 echo Nhan 0 de quay lai menu chinh
 :wait0a
-set /p back=Nhap 0 de quay lai: 
-if "%back%"=="0" goto menu
+set /p choice=Nhap lua chon: 
+if "%choice%"=="1" goto update
+if "%choice%"=="0" goto menu
 goto wait0a
 
 :exit
 exit
+
 
 
 
