@@ -80,7 +80,7 @@ Write-Host "ROM :"
 
 Get-PhysicalDisk | Format-Table FriendlyName,MediaType,Size -AutoSize
 
-Get-PSDrive -PSProvider 'FileSystem'
+#Get-PSDrive -PSProvider 'FileSystem'
 
 Write-Host "CPU :"
 # Lấy thông tin về bộ xử lý
