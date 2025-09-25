@@ -86,7 +86,11 @@ if %errorLevel% NEQ 0 (
     powershell -Command "Start-Process '%~f0' -Verb runAs"
     exit /b
 )
-del /q /f /s %TEMP%\* 
+set "currentFile=%~nx0"
+#echo Dang xoa file trong %TEMP% (tru file %currentFile%)...
+for %%f in (%TEMP%\*) do (
+    if /I not "%%~nxf"=="%currentFile%" del /q /f "%%f"
+)
 del /q /f %LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db 
 del /q /f /s "%LOCALAPPDATA%\Microsoft\Windows\INetCache\*" 
 del /q /f /s C:\Windows\Prefetch\*
@@ -128,6 +132,7 @@ goto wait0a
 
 :exit
 exit
+
 
 
 
