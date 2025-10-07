@@ -1,0 +1,34 @@
+### Tạo Office offline ###
+Bước 1: Tải công cụ Office Deployment Tool (ODT)
+Link: https://www.microsoft.com/en-us/download/details.aspx?id=49117
+
+Bước 2: Tạo file cấu hình configuration.xml
+Link: https://config.office.com/deploymentsettings
+
+Mẫu xml:
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="Current">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="en-us" />
+    </Product>
+    <Product ID="VisioProRetail">
+      <Language ID="en-us" />
+    </Product>
+  </Add>
+  <Display Level="None" AcceptEULA="TRUE" />
+  <Property Name="AUTOACTIVATE" Value="1" />
+</Configuration>
+
+Bước 4: Tạo Folder Office, Mở CMD Run As Admin
+cd C:\OfficeISO
+setup.exe /download configuration-Office365-x64.xml
+
+Bước 5: Tạo file autorun.inf (có thể bỏ qua, mục đích khi mở ISO có thể tự động chạy cài đặt)
+[AutoRun]
+open=setup.exe /configure configuration-Office365-x64.xml
+icon=setup.exe
+
+Bước 6: Mở UltraISO
+File → New → Data CD/DVD Image (kéo setup.exe, .xml, Office, .inf)
+File → Save As... (Đặt tên file, ví dụ: Office365_Offline.iso , chọn vị trí)
+
